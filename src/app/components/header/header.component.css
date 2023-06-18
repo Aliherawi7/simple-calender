@@ -1,0 +1,85 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+
+
+.menu-burger {
+    position: relative;
+    z-index: 100;
+}
+
+.menu-burger .toggle {
+    position: absolute;
+    top: 0px;
+    left: 40px;
+    width: 40px;
+    height: 40px;
+    opacity: 0.001;
+    z-index: 101;
+}
+
+.burger {
+    position: absolute;
+    top: 2px;
+    left: 40px;
+    width: 35px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.burger div {
+    width: 100%;
+    height: 4px;
+    background-color: #000;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+    margin: 5px 0;
+
+}
+
+.burger div::before,
+.burger div::after {
+    content: '';
+    background-color: #000;
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    top: -10px;
+}
+
+.burger div::after {
+    top: 10px;
+}
+
+.toggle:checked+.burger div {
+    transform: rotate(180deg);
+}
+
+.toggle:checked+.burger div:after,
+.toggle:checked+.burger div::before {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+.toggle:checked+.burger {
+    transform: rotate(45deg);
+}
+
+.brand_image {
+    margin-left: 100px;
+}

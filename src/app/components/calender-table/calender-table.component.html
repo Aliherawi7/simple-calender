@@ -1,0 +1,34 @@
+<div class="cleander_chart">
+    <div class="calendar-header">
+        <h2>{{ month }} {{ year }}</h2>
+        <div class="calender_nav">
+            <button (click)="prev()">
+                <i class="bi bi-chevron-left"></i>
+            </button>
+            <button (click)="next()"><i class="bi bi-chevron-right"></i></button>
+        </div>
+
+    </div>
+    <table class="calendar-table">
+        <thead>
+            <tr>
+                <th>S</th>
+                <th>M</th>
+                <th>T</th>
+                <th>W</th>
+                <th>T</th>
+                <th>F</th>
+                <th>S</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let week of weeks">
+                <td *ngFor="let day of week"
+                    [ngClass]="{is_not_current_month: !day.isCurrentMonth, selected_date: activeDate.getDate() == day.date.getDate() && day.isCurrentMonth}"
+                    (click)="select(day)">
+                    {{ day.date.getDate() }}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

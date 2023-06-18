@@ -1,0 +1,16 @@
+.home {
+    display: flex;
+    margin: 0 20px;
+}
+
+.appointments_side {
+    width: 100%;
+}
+
+.add_button {
+    border-radius: 30px;
+    padding: 8px 14px;
+    background: #f5f8fc;
+    font-size: 16px;
+    box-shadow: 0 3px 7px 2px #727272;
+}

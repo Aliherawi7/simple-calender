@@ -1,0 +1,32 @@
+<div class="appoinment_form_container">
+    <div class="header">
+        <i class="bi bi-text-left"></i>
+        <button (click)="closeFrom()">
+            <i class="bi bi-x-lg"></i>
+        </button>
+
+    </div>
+    <div class="form_container flex">
+        <div class="form_icon flex">
+            <i class="bi bi-text-left"></i>
+            <i class="bi bi-alarm"></i>
+        </div>
+        <form [formGroup]="appointmentForm" (ngSubmit)="submitForm()">
+            <div class="form-group">
+                <input type="text" class="form-control" id="title" placeholder="Add Title" formControlName="title"
+                    required>
+            </div>
+            <div class="date_time_container">
+                <input type="date" class="form-control" id="date" formControlName="date" required>
+                <input type="time" class="form-control" id="time" formControlName="time" required>
+                <label for="date-time" class="date_time_label">Time zone - Not repeated</label>
+            </div>
+            <div class="form-group description">
+                <label for="description">Description</label>
+                <textarea class="form-control" id="description" placeholder="add descripton or attachment"
+                    formControlName="description"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Save</button>
+        </form>
+    </div>
+</div>

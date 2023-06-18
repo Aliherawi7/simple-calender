@@ -1,0 +1,77 @@
+.cleander_chart {
+    width: 300px;
+    margin: 10px;
+}
+
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.selected_date::after {
+    position: absolute;
+    content: '';
+    width: 0.rem;
+    height: 0.rem;
+    border-radius: 50%;
+    background-color: #007bff;
+    border-radius: 50%;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    z-index: -1;
+}
+
+
+.calendar-header h2 {
+    font-size: 18px;
+}
+
+.calender_nav {
+    display: flex;
+}
+
+.calender_nav button {
+    outline: none;
+    border: none;
+    font-size: 20px;
+    background-color: transparent;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.calendar-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+tr {
+    height: 40px;
+}
+
+th,
+td {
+    padding: 0.2rem;
+    text-align: center;
+    width: 0.5rem;
+    height: 0.5rem;
+    position: relative;
+    font-weight: 600;
+}
+
+td {
+    cursor: pointer;
+}
+
+td.is_not_current_month {
+    color: #979797;
+}
+
+td.selected {
+    background-color: #007bff;
+    color: #fff;
+}

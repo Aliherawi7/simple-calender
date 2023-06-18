@@ -1,0 +1,13 @@
+<div class="home">
+    <section class="calender_side">
+        <button (click)="showAppointment()" class="add_button"><i class="bi bi-plus-lg"></i>Create</button>
+        <app-calender-table></app-calender-table>
+    </section>
+    <section class="appointments_side">
+        <app-appointments-view></app-appointments-view>
+    </section>
+    <app-backdrop [show]="showAppointmentForm">
+        <app-appointment-form (close)="showAppointment()"></app-appointment-form>
+    </app-backdrop>
+
+</div>

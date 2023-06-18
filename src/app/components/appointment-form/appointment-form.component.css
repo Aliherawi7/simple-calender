@@ -1,0 +1,107 @@
+.appoinment_form_container {
+    background-color: #fff;
+    border-radius: 10px;
+    width: 400px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.form_container {
+    padding: 0 20px;
+}
+
+.header {
+    background-color: #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.form_icon {
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.date_time_container {
+    display: flex;
+    padding: 0 20px;
+    position: relative;
+}
+
+.form_icon {
+    width: 3rem;
+    justify-content: flex-end;
+    margin-bottom: 75px;
+    align-items: center;
+}
+
+.form_icon i {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.form_container {
+    margin-bottom: 2rem;
+    padding: 10px;
+    margin-left: 1rem;
+
+}
+
+#label {
+    font-weight: bold;
+}
+
+input[type="date"],
+input[type="time"] {
+    width: 100%;
+    margin-left: 20px;
+}
+
+.date_time_label {
+    position: absolute;
+    bottom: -20px;
+    left: 40px;
+    font-size: 12px;
+    font-weight: 300;
+    color: #757575;
+}
+
+#title {
+    border-bottom: 1px solid #ddd;
+    font-size: 20px;
+
+}
+
+
+button[type="submit"] {
+    margin-top: 1rem;
+    align-self: flex-end;
+    margin: 5px;
+    background-color: #3874f7;
+    color: #fff;
+    font-weight: 400;
+    padding: 8px 26px;
+}
+
+.description {
+    margin-top: 20px;
+}
+
+.description textarea {
+    resize: none;
+}

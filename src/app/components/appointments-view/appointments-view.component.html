@@ -1,0 +1,30 @@
+<div class="appoitment_view">
+    <div class="date_container flex">
+        <span class="week_day flex">{{weekDay}}</span>
+        <span class="date flex">{{ dayNumber }}</span>
+    </div>
+    <div class="appointments">
+        <div class="appointment_table">
+            <div class="time_period">
+                <div class="time" *ngFor="let hour of hours">
+                    {{ hour }}
+                </div>
+            </div>
+            <div class="appointment_period" id="appointment_period" cdkDropList [cdkDropListData]="appointments"
+                class="example-list" (cdkDropListDropped)="drop($event)"
+                [cdkDropListEnterPredicate]="noReturnPredicate">
+                <div class="appointment_cont" *ngFor="let appointment of appointments" [cdkDragData]="appointment"
+                    cdkDrag>
+                    <div class="appointment" *ngIf="appointment.date">
+                        <span>{{ appointment.title }} </span>
+                        <span>{{ appointment.time }} </span>
+                    </div>
+                    <span class="empty_span" *ngIf="!appointment.date"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
