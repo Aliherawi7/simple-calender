@@ -24,9 +24,9 @@ The technical task is to create a simple calender application from scratch. to r
 
 
 ## Home page
-![Home page](screenshot\1.png)
+![Home page](screenshot/1.png)
 ## adding appointment form
-![adding appointment form](screenshot\2.png)
+![adding appointment form](screenshot/2.png)
 
 
 
